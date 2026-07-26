@@ -1,0 +1,159 @@
+:root {
+  --bg: #0e1116;
+  --bg-soft: #161b22;
+  --card: #1b2230;
+  --border: #263041;
+  --text: #e6edf3;
+  --muted: #9aa7b8;
+  --brand: #6c8cff;
+  --brand-2: #a06cff;
+  --accent: #34d399;
+  --radius: 16px;
+  --maxw: 900px;
+  font-synthesis-weight: none;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: radial-gradient(1200px 600px at 50% -200px, #1a2333 0%, var(--bg) 60%);
+  color: var(--text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header / nav */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+.brand:hover { text-decoration: none; }
+.brand .logo {
+  width: 34px; height: 34px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  display: grid; place-items: center;
+  font-weight: 800; color: white; font-size: 1rem;
+}
+.site-header nav a { color: var(--muted); margin-left: 18px; font-size: .95rem; }
+.site-header nav a:hover { color: var(--text); text-decoration: none; }
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 72px 0 40px;
+}
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  line-height: 1.1;
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+}
+.hero .grad {
+  background: linear-gradient(120deg, var(--brand), var(--brand-2));
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero p {
+  color: var(--muted);
+  font-size: 1.15rem;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* App cards */
+.apps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 20px 0 40px;
+}
+.app-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  transition: transform .15s ease, border-color .15s ease;
+}
+.app-card:hover { transform: translateY(-3px); border-color: var(--brand); }
+.app-card h3 { margin: 0 0 6px; font-size: 1.25rem; }
+.app-card .kicker { color: var(--accent); font-size: .8rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; }
+.app-card p { color: var(--muted); margin: 10px 0 18px; font-size: .97rem; }
+.app-card .links a {
+  display: inline-block;
+  font-size: .9rem;
+  margin-right: 14px;
+  color: var(--muted);
+}
+.app-card .links a:hover { color: var(--brand); text-decoration: none; }
+
+/* Section */
+section.block { padding: 40px 0; border-top: 1px solid var(--border); }
+section.block h2 { font-size: 1.5rem; margin: 0 0 12px; }
+section.block p { color: var(--muted); }
+
+/* Legal / doc pages */
+.doc {
+  padding: 40px 0 20px;
+}
+.doc h1 { font-size: 2rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+.doc .eyebrow { color: var(--accent); font-weight: 600; font-size: .85rem; text-transform: uppercase; letter-spacing: .06em; }
+.doc .updated { color: var(--muted); font-size: .9rem; margin: 4px 0 28px; }
+.doc h2 { font-size: 1.25rem; margin: 34px 0 10px; }
+.doc h3 { font-size: 1.05rem; margin: 22px 0 8px; }
+.doc p, .doc li { color: #c9d4e0; }
+.doc ul { padding-left: 22px; }
+.doc li { margin: 6px 0; }
+.doc .tldr {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin: 20px 0 8px;
+}
+.doc .tldr strong { color: var(--text); }
+.doc table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: .95rem; }
+.doc th, .doc td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.doc th { color: var(--muted); font-weight: 600; }
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+  padding: 28px 0 48px;
+  color: var(--muted);
+  font-size: .9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-footer a { color: var(--muted); }
+.site-footer a:hover { color: var(--text); }
+.back-link { display: inline-block; margin: 24px 0 0; color: var(--muted); font-size: .9rem; }
