@@ -11,6 +11,10 @@ talk-about-the-day/
   index.html                     App support page
   privacy.html                   Privacy Policy
   terms.html                     Terms of Service
+crypto-ta/
+  index.html                     App support page
+  privacy.html                   Privacy Policy
+  terms.html                     Terms of Service
 plan-my-plate/
   index.html                     App support page
   privacy.html                   Privacy Policy
