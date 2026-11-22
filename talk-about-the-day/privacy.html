@@ -20,10 +20,10 @@
     <article class="doc">
       <span class="eyebrow">Talk About The Day</span>
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: October 22, 2026</p>
+      <p class="updated">Last updated: November 22, 2026</p>
 
       <div class="tldr">
-        <strong>The short version:</strong> Your recordings stay <strong>on your device</strong> and are transcribed there by default. They only leave your device if you choose to: backing them up to the cloud, using the optional Premium cloud transcription or "Polish" features (which the App asks your permission for first), or sharing a recording. You can delete your cloud data, or your whole account, at any time from within the App.
+        <strong>The short version:</strong> Your recordings are stored <strong>on your device</strong>. They only leave it if you choose to: transcribing a recording, using Polish, title suggestions or summaries (these use cloud AI services, and the App asks your permission first), backing recordings up to the cloud, or sharing one. You can delete your cloud data, or your whole account, at any time from within the App.
       </div>
 
       <p>This Privacy Policy explains how <strong>Backflipped Studios LLC</strong> ("Backflipped Studios," "we," "us," or "our") collects, uses, and protects information when you use the <strong>Talk About The Day</strong> mobile application (the "App"). By using the App, you agree to the practices described here.</p>
@@ -34,16 +34,16 @@
       <p>When you sign in with Apple or Google, we receive basic account information such as your name, email address, and a unique user identifier. This is handled through Firebase Authentication (a Google service) and is used to secure your account and sync your data across devices.</p>
 
       <h3>Content you create</h3>
-      <p>The App is built around audio recordings and their transcripts. Recordings you make are stored <strong>locally on your device</strong>. By default, transcription is performed <strong>on-device</strong> using an embedded speech-recognition model, and your audio is not uploaded anywhere to be transcribed.</p>
+      <p>The App is built around audio recordings and their transcripts. Recordings you make are stored <strong>locally on your device</strong>. Transcripts are made in the cloud, and only when you ask for one or turn on automatic transcription. If you transcribe a recording without cloud backup, its audio is uploaded only to be transcribed and is deleted from our storage afterward.</p>
       <p>If you back up your recordings, your audio, transcripts, titles, dates, and (if you turned on location tagging) recording locations are uploaded to your private storage area in Firebase (Google Cloud) so you can restore them or access them on another device. Cloud backup is optional and under your control.</p>
 
-      <h3>Optional cloud AI features (Premium)</h3>
-      <p>Two optional Premium features use third-party AI services. The App explains this and asks for your permission before either is used for the first time:</p>
+      <h3>Cloud AI features</h3>
+      <p>Transcription and the other AI features use third-party AI services. The App explains this and asks for your permission before any of them is used for the first time:</p>
       <ul>
-        <li><strong>Cloud transcription</strong> sends a recording's audio to <strong>Google Cloud Speech-to-Text</strong> to produce a transcript.</li>
-        <li><strong>Polish</strong> sends a transcript's text to <strong>OpenAI</strong> to fix punctuation and transcription errors.</li>
+        <li><strong>Transcription</strong> sends a recording's audio to <strong>OpenAI</strong> to produce a transcript. If OpenAI is unavailable, the audio is sent to <strong>Google Cloud Speech-to-Text</strong> instead.</li>
+        <li><strong>Polish</strong>, <strong>title suggestions</strong> and <strong>summaries</strong> send transcript text to <strong>OpenAI</strong>.</li>
       </ul>
-      <p>These services process the data only to return the result to you. Under their API terms, neither uses it to train their models. If you don't use these features, nothing is sent to them.</p>
+      <p>These services process the data only to return the result to you. Under their API terms, neither uses it to train their models. If you don't use these features, nothing is sent to them. Signed-in users without Premium get a few free transcriptions; we keep a count of how many you've used.</p>
 
       <h3>Sharing</h3>
       <p>When you share a recording, the App creates a private link that expires (after 24 hours by default). Anyone you give the link to can listen to that recording until it expires.</p>
@@ -75,8 +75,8 @@
       <ul>
         <li><strong>Google Firebase</strong> (Authentication, Cloud Firestore, Cloud Storage, Analytics, Crashlytics, App Check) — account, synced content, and diagnostics.</li>
         <li><strong>Sign in with Apple and Google Sign-In</strong> — authentication.</li>
-        <li><strong>Google Cloud Speech-to-Text</strong> — optional cloud transcription (audio).</li>
-        <li><strong>OpenAI</strong> — optional transcript polishing (transcript text).</li>
+        <li><strong>OpenAI</strong> — transcription (audio), and Polish, title suggestions and summaries (transcript text).</li>
+        <li><strong>Google Cloud Speech-to-Text</strong> — transcription (audio) when OpenAI is unavailable.</li>
         <li><strong>OpenStreetMap</strong> — map images for the memory map. Your device downloads them directly, which shares your IP address with OpenStreetMap's servers, but not your recordings.</li>
         <li><strong>RevenueCat</strong> — subscription management.</li>
         <li><strong>Apple App Store / Google Play</strong> — payment processing.</li>
