@@ -19,6 +19,11 @@ plan-my-plate/
   index.html                     App support page
   privacy.html                   Privacy Policy
   terms.html                     Terms of Service
+mantel/
+  index.html                     App support page
+  privacy.html                   Privacy Policy
+  terms.html                     Terms of Use
+  delete-account.html            Account deletion instructions
 ```
 
 ## Adding a new app
