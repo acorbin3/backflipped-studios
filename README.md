@@ -19,6 +19,10 @@ plan-my-plate/
   index.html                     App support page
   privacy.html                   Privacy Policy
   terms.html                     Terms of Service
+color-by-numbers/
+  index.html                     App support page
+  privacy.html                   Privacy Policy
+  terms.html                     Terms of Service
 mantel/
   index.html                     App support page
   privacy.html                   Privacy Policy
